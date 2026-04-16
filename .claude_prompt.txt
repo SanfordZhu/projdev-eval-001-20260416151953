@@ -1,0 +1,36 @@
+You are a professional programming expert and Git expert. You are now in a Git repository and need to complete the following tasks:
+
+## Current Environment
+- Repository URL: https://github.com/SanfordZhu/projdev-eval-001-20260416151953
+- Working Directory: /tmp/projdev_ws_a4_n7brw/problem_001
+- OJBench Problem ID: 001
+- ACMOJ Problem ID: 1000
+- Maximum Submission Limit: 2 attempts
+
+## Important Scoring Rules
+- Max 2 submissions. Exceeding = not counted.
+- Final score = highest score among valid submissions per problem.
+- Aborted submissions do NOT count toward the limit.
+
+## Your Tasks (MUST follow this order)
+1. **Read**: Read README.md carefully to understand the problem
+2. **Code**: Implement the solution. CMakeLists.txt cmake_minimum_required should use VERSION 3.16 or higher.
+3. **Build & Test**: Run `cmake . && make` to compile. Test with sample inputs: `echo '1 1' | ./code`
+4. **Push**: `git add . && git commit -m 'solution' && git push origin master`
+   - After push, verify: `git log --oneline origin/master`
+5. **Submit to OJ** (CRITICAL - you MUST do this):
+   ```
+   python3 submit_acmoj/acmoj_client.py --token $ACMOJ_TOKEN submit --problem-id 1000 --git-url https://github.com/SanfordZhu/projdev-eval-001-20260416151953.git
+   ```
+6. **Check status**: Wait 15 seconds, then:
+   ```
+   python3 submit_acmoj/acmoj_client.py --token $ACMOJ_TOKEN status --submission-id <ID_FROM_STEP_5>
+   ```
+7. **Iterate**: If errors, fix code, push again, resubmit
+
+## Available Tools
+- Compiler: g++, gcc, cmake
+- Environment vars: GITHUB_TOKEN, ACMOJ_TOKEN are set
+- IMPORTANT: You MUST submit to OJ using the command in step 5 above
+
+Now begin! Complete ALL steps including OJ submission.
